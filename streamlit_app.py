@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image  # Import Image from Pillow
 
 st.title("🎈 testtt")
 st.write(
@@ -12,3 +13,7 @@ hobby = st.selectbox("Select a Hobby:", ['Dancing', 'Reading', 'Sports'])
 
 # Display the selected hobby
 st.write("Your hobby is:", hobby)
+
+
+img = Image.open("images.png") # Open the image file
+st.image(img, width=200) # Display the image with a specified width
